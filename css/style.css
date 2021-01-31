@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.wrap{
+  width: 100vw;
+  height: 100vh;
+  background-color: #DADBD5;
+}
+
+.green-banner{
+  width: 100vw;
+  height: 150px;
+  background-color: #009788;
+}
+
+.box-general{
+  width: 1600px;
+  height: 100%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.column-1{
+  background-color: red;
+  width: 500px;
+  height: 100%;
+}
+
+.box-profile{
+  background-color: blue;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.nomeUtente{
+  line-height: 90px;
+}
+
+.boolzap-image{
+  border-radius: 50%;
+  width: 60px;
+  vertical-align: center;
+  position: relative;
+  margin-left: 10px;
+  top: 50%;
+  transform: translate(0%, -50%);
+
+}
+
+.box-profile-right{
+  line-height: 105px;
+}
+
+.box-contacts{
+  margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+}
