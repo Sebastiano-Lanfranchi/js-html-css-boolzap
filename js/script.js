@@ -85,8 +85,15 @@ new Vue({
              }
          ],
      },
- ]
+ ],
+ indexContact: 0,
+ messaggi: '',
   },
+  methods: {
+    chooser: function(index){
+      this.indexContact = index;
+    },
+  }
 });
 
 

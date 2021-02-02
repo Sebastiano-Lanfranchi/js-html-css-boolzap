@@ -19,7 +19,7 @@
            <div class="box-profile">
              <div class="box-profile-left">
                <span><img src="img/avatar_7.jpg" class="boolzap-image" alt=""></span>
-               <span clas="nomeUtente">Sebastiano Lanfranchi</span>
+               <span class="nomeUtente">Sebastiano Lanfranchi</span>
              </div>
              <div class="box-profile-right">
                <span><i class="fas fa-circle-notch fa-2x"></i></span>
@@ -27,9 +27,40 @@
                <span><i class="fas fa-ellipsis-v fa-2x"></i></span>
              </div>
            </div>
-           <div v-for="contact in contacts" class="box-contacts">
+           <div class="notifiche">
+             <span class="circle"><i class="far fa-bell-slash fa-2x"></i></span>
+            <div class="">
+              <div>
+                Ricevi notifiche di nuovi messaggi
+              </div>
+              <div class="underLine">
+                Attiva notifiche desktop
+              </div>
+            </div>
+           </div>
+           <div v-for="(contact, index) in contacts" class="box-contacts" @click="chooser(index)" >
              <img :src="contact.avatar" alt="" class="boolzap-image">
              <span class="vertical-align">{{contact.name}}</span>
+           </div>
+         </div>
+         <div class="column-2">
+           <div class="box-contact-chose">
+             <div class="box-profile-chose">
+               <div><img :src="contacts[indexContact].avatar" class="boolzap-image" alt=""></div>
+               <span class="center">
+                 <div class="">
+                   {{contacts[indexContact].name}}
+                 </div>
+                 <div class="">
+                   ultimo accesso oggi alle {{contacts[indexContact].messages.date}}
+                 </div>
+               </span>
+             </div>
+             <div class="box-profile-right">
+               <span><i class="fas fa-circle-notch fa-2x"></i></span>
+               <span><i class="far fa-comment-alt fa-2x"></i></span>
+               <span><i class="fas fa-ellipsis-v fa-2x"></i></span>
+             </div>
            </div>
          </div>
         </div>
