@@ -87,12 +87,34 @@ new Vue({
      },
  ],
  indexContact: 0,
- messaggi: '',
+ userMessage: '',
   },
   methods: {
     chooser: function(index){
       this.indexContact = index;
     },
+  sendMessage: function(){
+    const newMessageObject = {
+      date: '10/01/2015 15:50:00',
+      text: this.userMessage,
+      status: 'sent'
+    }
+    this.contacts[this.indexContact].messages.push(newMessageObject);
+    this.userMessage = '';
+
+    let that = this;
+    setTimeout(function(){
+      that.autoReply()
+    },1000)
+  },
+  autoReply: function() {
+    const reply = {
+      date: '10/01/2015 15:50:00',
+      text: 'OKK',
+      status: 'received'
+    }
+    this.contacts[this.indexContact].messages.push(reply);
+  },
   }
 });
 
