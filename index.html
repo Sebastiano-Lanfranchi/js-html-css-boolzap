@@ -38,6 +38,10 @@
               </div>
             </div>
            </div>
+           <section class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+            </section>
            <div v-for="(contact, index) in contacts" class="box-contacts" @click="chooser(index)" >
              <img :src="contact.avatar" alt="" class="boolzap-image">
              <span class="vertical-align">{{contact.name}}</span>
@@ -72,6 +76,22 @@
              {{message.text}}
              </div>
            </div>
+           <div class="footer">
+                <div class="smile">
+                    <i class="far fa-smile"></i>
+                </div>
+                <div class="text-bar">
+                    <input
+                    type="text"
+                    placeholder="Scrivi un messaggio"
+                    v-model="messaggi"
+                    @keyup.enter="addMessage"
+                    >
+                </div>
+                <div class="registration">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
          </div>
         </div>
       </div>

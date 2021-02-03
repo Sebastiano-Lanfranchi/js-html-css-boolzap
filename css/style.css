@@ -82,6 +82,23 @@
 
 }
 
+.search-bar{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: #b1b1b1;
+    font-size: 18px;
+    padding: 0 15px;
+}
+
+.search-bar input {
+    border: none;
+    color: #b1b1b1;
+    font-weight: 500;
+    padding: 5px;
+    width: 80%;
+}
+
 .circle{
   border-radius: 50%;
   color: white;
@@ -131,4 +148,48 @@
 .received{
   float: left;
   width: 600px;
+}
+
+.footer {
+    height: 60px;
+    display: flex;
+    background-color: #fff;
+    position: absolute;
+    top:860px;
+    width: 1220px;
+}
+
+.smile{
+  width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #697376;
+    font-size: 18px;
+}
+
+.text-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-bar input {
+    width: 100%;
+    border: none;
+    background-color: #fff;
+    color: #858585;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 10px;
+}
+
+.registration {
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #697376;
+    font-size: 18px;
 }
