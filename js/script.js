@@ -1,6 +1,9 @@
 new Vue({
   el: '#root',
   data: {
+    indexContact: 0,
+    userMessage: '',
+    searchContact: '',
     contacts: [
      {
          name: 'Michele',
@@ -86,8 +89,6 @@ new Vue({
          ],
      },
  ],
- indexContact: 0,
- userMessage: '',
   },
   methods: {
     chooser: function(index){
@@ -115,6 +116,11 @@ new Vue({
     }
     this.contacts[this.indexContact].messages.push(reply);
   },
+  filteredList() {
+    return this.contacts.filter(contact => {
+      return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+  })
+}
   }
 });
 
