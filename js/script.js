@@ -116,11 +116,11 @@ new Vue({
     }
     this.contacts[this.indexContact].messages.push(reply);
   },
-  filteredList() {
-    return this.contacts.filter(contact => {
-      return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
-  })
-}
+//   filteredList() {
+//     return this.contacts.filter(contact => {
+//       return contact.name.toLowerCase().includes(this.searchContact.toLowerCase())
+//   })
+// }
   }
 });
 
